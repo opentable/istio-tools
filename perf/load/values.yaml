@@ -20,7 +20,7 @@ proxyMemory: 128Mi
 # If enabled, strict mTLS will be set for the namespace
 mtls: true
 
-prometheus_scrape: false
+prometheus_scrape: true
 
 # For multi cluster case
 # first cluster run with multicluster.enabled=true and multicluster.cluster1=true
@@ -77,6 +77,10 @@ services:
 - "0-7-0"
 - "0-8"
 - "0-8-0"
+- "0-9"
+- "0-9-0"
+- "0-10"
+- "0-10-0"
 
 # service port name
 httpPortName: http-web

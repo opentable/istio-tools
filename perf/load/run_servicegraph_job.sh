@@ -40,7 +40,7 @@ export DELETE=""
 export LC_ALL=C.UTF-8
 export LANG=C.UTF-8
 
-helm init --client-only
+#helm init --client-only
 # shellcheck disable=SC1090,SC1091
 source "${ROOT}/../bin/setup_cluster.sh"
 setup_e2e_cluster

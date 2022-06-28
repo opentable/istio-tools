@@ -22,6 +22,8 @@ if [[ -z "${GATEWAY_URL:-}" ]];then
   fi
 fi
 
+GATEWAY_URL="istio-ingress.istio-ingress"
+
 HTTPS=${HTTPS:-"false"}
 H2UPGRADE=${H2UPGRADE:-"false"}
 

@@ -38,6 +38,7 @@ if [[ -z "${GATEWAY_URL:-}" ]];then
   fi
 fi
 
+GATEWAY_URL="istio-ingress.istio-ingress"
 SERVICEHOST="${NAMEPREFIX}0.local"
 
 function run_test() {

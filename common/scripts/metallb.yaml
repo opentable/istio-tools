@@ -5,6 +5,7 @@ metadata:
   name: metallb-system
   labels:
     app: metallb
+    skip-docker-review: 'yes'
 ---
 apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
