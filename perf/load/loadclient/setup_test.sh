@@ -56,7 +56,7 @@ function run_test() {
 
   if [[ -z "${DELETE}" ]];then
     kubectl create ns "${NAMESPACE}" || true
-    kubectl label namespace "${NAMESPACE}" "${INJECTION_LABEL}" --overwrite
+    kubectl label namespace "${NAMESPACE}" "${INJECTION_LABEL}" "skip-docker-review=yes" --overwrite
     kubectl -n "${NAMESPACE}" apply -f "${YAML}"
   else
     kubectl -n "${NAMESPACE}" delete -f "${YAML}"

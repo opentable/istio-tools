@@ -29,7 +29,7 @@ function setup_test() {
   local OUTFILE="${WD}/tmp/${NAMESPACE}.yaml"
 
   kubectl create ns "${NAMESPACE}" || true
-  kubectl label namespace "${NAMESPACE}" "${INJECTION_LABEL}" || true
+  kubectl label namespace "${NAMESPACE}" "${INJECTION_LABEL}" "skip-docker-review=yes" || true
 
   helm --namespace "${NAMESPACE}" -f ./values.yaml --set "${HELM_FLAGS}" \
     template "${WD}" > "${OUTFILE}"

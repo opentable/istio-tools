@@ -52,7 +52,7 @@ function run_test() {
   echo "Wrote ${YAML}"
 
   kubectl create ns "${ns}" || true
-  kubectl label namespace "${ns}" "${injection_label}" --overwrite
+  kubectl label namespace "${ns}" "${injection_label}" "skip-docker-review=yes" --overwrite
 
    if [[ -z "${DELETE}" ]];then
     sleep 3

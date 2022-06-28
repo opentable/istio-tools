@@ -87,12 +87,12 @@ kubectl create ns "${NAMESPACE}" || true
 
 if [[ "$ISTIO_INJECT" == "true" ]]
 then
-  kubectl label namespace "${NAMESPACE}" istio-injection=enabled --overwrite || true
+  kubectl label namespace "${NAMESPACE}" istio-injection=enabled skip-docker-review=yes --overwrite || true
 fi
 
 if [[ "$LINKERD_INJECT" == "enabled" ]]
 then
-  kubectl annotate namespace "${NAMESPACE}" linkerd.io/inject=enabled || true
+  kubectl annotate namespace "${NAMESPACE}" linkerd.io/inject=enabled skip-docker-review=yes || true
 fi
 
 run_test
